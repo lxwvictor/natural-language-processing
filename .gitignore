@@ -104,3 +104,5 @@ ENV/
 data/
 
 .idea
+*.bin
+*.gz
