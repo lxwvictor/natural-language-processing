@@ -49,13 +49,16 @@ def load_embeddings(embeddings_path):
     ########################
     #### YOUR CODE HERE ####
     ########################
+    embeddings = {}
 
-    # remove this when you're done
-    raise NotImplementedError(
-        "Open utils.py and fill with your code. In case of Google Colab, download"
-        "(https://github.com/hse-aml/natural-language-processing/blob/master/project/utils.py), "
-        "edit locally and upload using '> arrow on the left edge' -> Files -> UPLOAD")
+    for line in open(embeddings_path):
+        word, *vector = line.split('\t')
+        embeddings[word] = np.array(vector).astype(float)
 
+    # non-destructive way to get arbitrary item
+    embeddings_dim = len(next(iter(embeddings.values())))
+
+    return embeddings, embeddings_dim
 
 def question_to_vec(question, embeddings, dim):
     """Transforms a string to an embedding by averaging word embeddings."""
@@ -66,12 +69,16 @@ def question_to_vec(question, embeddings, dim):
     #### YOUR CODE HERE ####
     ########################
 
-    # remove this when you're done
-    raise NotImplementedError(
-        "Open utils.py and fill with your code. In case of Google Colab, download"
-        "(https://github.com/hse-aml/natural-language-processing/blob/master/project/utils.py), "
-        "edit locally and upload using '> arrow on the left edge' -> Files -> UPLOAD")
-
+    result = np.zeros(dim)
+    words = question.split(' ')
+    valid_count = 0
+    for word in words:
+        if word in embeddings:
+            result += embeddings[word][:dim]
+            valid_count += 1
+            
+    result = result/valid_count if valid_count != 0 else result
+    return result
 
 def unpickle_file(filename):
     """Returns the result of unpickling the file content."""
