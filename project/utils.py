@@ -60,7 +60,7 @@ def load_embeddings(embeddings_path):
 
     return embeddings, embeddings_dim
 
-def question_to_vec(question, embeddings, dim):
+def question_to_vec(question, embeddings, dim=100):
     """Transforms a string to an embedding by averaging word embeddings."""
 
     # Hint: you have already implemented exactly this function in the 3rd assignment.

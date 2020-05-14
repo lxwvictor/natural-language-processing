@@ -29,3 +29,9 @@ If this doesn't work, you can explicitly specify the encoding when opening files
 with open(filename, 'r', encoding="utf-8") as file:
   ...
 ```
+
+### Both crashes with attribute error
+The docker image has version 0.7.4, need to install a newer version.
+```bash
+pip install ChatterBot==1.0.0
+```

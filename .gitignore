@@ -24,6 +24,7 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+.vscode
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -103,6 +104,7 @@ ENV/
 # Data for assignments
 data/
 thread_embeddings_by_tags/
+word_embeddings.tsv
 .idea
 *.bin
 *.gz
