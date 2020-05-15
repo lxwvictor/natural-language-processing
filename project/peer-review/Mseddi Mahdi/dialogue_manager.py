@@ -1,9 +1,10 @@
 import os
 from sklearn.metrics.pairwise import pairwise_distances_argmin
 
-from chatterbot import ChatBot
 from utils import *
+paths = RESOURCE_PATH
 
+from chatterbot import ChatBot
 
 class ThreadRanker(object):
     def __init__(self, paths):
@@ -23,11 +24,12 @@ class ThreadRanker(object):
 
         # HINT: you have already implemented a similar routine in the 3rd assignment.
         
-        #### YOUR CODE HERE ####
-        question_vec = question_to_vec(question, self.word_embeddings, self.embeddings_dim).reshape(1,-1)
-
-        #### YOUR CODE HERE ####
-        best_thread = pairwise_distances_argmin(question_vec, thread_embeddings, metric='cosine')[0]
+        question_vec = question_to_vec(question, self.word_embeddings, self.embeddings_dim)
+        best_thread = pairwise_distances_argmin(
+            X=question_vec.reshape(1, self.embeddings_dim),
+            Y=thread_embeddings,
+            metric='cosine'
+        )
         
         return thread_ids[best_thread]
 
@@ -54,14 +56,17 @@ class DialogueManager(object):
         # It could be done by creating ChatBot with the *trainer* parameter equals 
         # "chatterbot.trainers.ChatterBotCorpusTrainer"
         # and then calling *train* function with "chatterbot.corpus.english" param
+        from chatterbot.trainers import ChatterBotCorpusTrainer
+
+        self.mybot = ChatBot("Training Example")
+        self.mybot.set_trainer(ChatterBotCorpusTrainer)
+
+        self.mybot.train("chatterbot.corpus.english")
+        
         
         ########################
         #### YOUR CODE HERE ####
         ########################
-        from chatterbot.trainers import ChatterBotCorpusTrainer
-        self.chitchat_bot = ChatBot('Jarvis')
-        trainer = ChatterBotCorpusTrainer(self.chitchat_bot)
-        trainer.train("chatterbot.corpus.english")
        
     def generate_answer(self, question):
         """Combines stackoverflow and chitchat parts using intent recognition."""
@@ -69,29 +74,24 @@ class DialogueManager(object):
         # Recognize intent of the question using `intent_recognizer`.
         # Don't forget to prepare question and calculate features for the question.
         
-        #### YOUR CODE HERE ####
-        prepared_question = [text_prepare(question)]
-        #### YOUR CODE HERE ####
-        features = self.tfidf_vectorizer.transform(prepared_question)
-        #### YOUR CODE HERE ####
+        prepared_question = text_prepare(question)
+        features = self.tfidf_vectorizer.transform([prepared_question])
         intent = self.intent_recognizer.predict(features)[0]
 
+           
         # Chit-chat part:   
         if intent == 'dialogue':
             # Pass question to chitchat_bot to generate a response.       
-            #### YOUR CODE HERE ####
-            response = self.chitchat_bot.get_response(question)
+            response = self.mybot.get_response(prepared_question)
             return response
         
         # Goal-oriented part:
         else:        
-            # Pass features to tag_classifier to get predictions.
-            #### YOUR CODE HERE ####
+            # Pass features to tag_clasifier to get predictions.
             tag = self.tag_classifier.predict(features)[0]
             
             # Pass prepared_question to thread_ranker to get predictions.
-            #### YOUR CODE HERE ####
-            thread_id = self.thread_ranker.get_best_thread(prepared_question[0], tag)
+            thread_id = self.thread_ranker.get_best_thread(prepared_question, tag)
            
             return self.ANSWER_TEMPLATE % (tag, thread_id)
 
