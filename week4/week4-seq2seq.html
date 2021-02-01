@@ -13074,6 +13074,53 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># set tf 1.x for colab</span>
+<span class="o">%</span><span class="k">tensorflow_version</span> 1.x
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>UsageError: Line magic function `%tensorflow_version` not found.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">DeprecationWarning</span><span class="p">)</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">FutureWarning</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13110,7 +13157,7 @@ Output: '-99'
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
@@ -13123,7 +13170,7 @@ Output: '-99'
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">generate_equations</span><span class="p">(</span><span class="n">allowed_operators</span><span class="p">,</span> <span class="n">dataset_size</span><span class="p">,</span> <span class="n">min_value</span><span class="p">,</span> <span class="n">max_value</span><span class="p">):</span>
@@ -13169,7 +13216,7 @@ Output: '-99'
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">test_generate_equations</span><span class="p">():</span>
@@ -13190,7 +13237,7 @@ Output: '-99'
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">test_generate_equations</span><span class="p">())</span>
@@ -13229,7 +13276,7 @@ Output: '-99'
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
@@ -13242,7 +13289,7 @@ Output: '-99'
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">allowed_operators</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">]</span>
@@ -13268,7 +13315,7 @@ Output: '-99'
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">word2id</span> <span class="o">=</span> <span class="p">{</span><span class="n">symbol</span><span class="p">:</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">symbol</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="s1">&#39;#^$+-1234567890&#39;</span><span class="p">)}</span>
@@ -13289,7 +13336,7 @@ Output: '-99'
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">start_symbol</span> <span class="o">=</span> <span class="s1">&#39;^&#39;</span>
@@ -13347,7 +13394,7 @@ Output: '-99'
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">sentence_to_ids</span><span class="p">(</span><span class="n">sentence</span><span class="p">,</span> <span class="n">word2id</span><span class="p">,</span> <span class="n">padded_len</span><span class="p">):</span>
@@ -13392,7 +13439,7 @@ Output: '-99'
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">test_sentence_to_ids</span><span class="p">():</span>
@@ -13418,7 +13465,7 @@ Output: '-99'
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">test_sentence_to_ids</span><span class="p">())</span>
@@ -13457,7 +13504,7 @@ Output: '-99'
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">ids_to_sentence</span><span class="p">(</span><span class="n">ids</span><span class="p">,</span> <span class="n">id2word</span><span class="p">):</span>
@@ -13494,7 +13541,7 @@ Output: '-99'
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">batch_to_ids</span><span class="p">(</span><span class="n">sentences</span><span class="p">,</span> <span class="n">word2id</span><span class="p">,</span> <span class="n">max_len</span><span class="p">):</span>
@@ -13534,7 +13581,7 @@ Output: '-99'
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">generate_batches</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">64</span><span class="p">):</span>
@@ -13564,7 +13611,7 @@ Output: '-99'
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sentences</span> <span class="o">=</span> <span class="n">train_set</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -13587,9 +13634,9 @@ Output: '-99'
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Input: (&#39;990-4279&#39;, &#39;-3289&#39;)
-Ids: [[13, 13, 14, 4, 8, 6, 11, 13, 2], [4, 7, 6, 12, 13, 2, 0, 0, 0]]
-Sentences lengths: [9, 6]
+<pre>Input: (&#39;9736+4167&#39;, &#39;13903&#39;)
+Ids: [[13, 11, 7, 10, 3, 8, 5, 10, 11, 2], [5, 7, 13, 14, 7, 2, 0, 0, 0, 0]]
+Sentences lengths: [10, 6]
 </pre>
 </div>
 </div>
@@ -13608,54 +13655,13 @@ Sentences lengths: [9, 6]
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>C:\Users\Xiaowei\Anaconda3\envs\tfspark\lib\site-packages\tensorflow\python\framework\dtypes.py:516: FutureWarning: Passing (type, 1) or &#39;1type&#39; as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / &#39;(1,)type&#39;.
-  _np_qint8 = np.dtype([(&#34;qint8&#34;, np.int8, 1)])
-C:\Users\Xiaowei\Anaconda3\envs\tfspark\lib\site-packages\tensorflow\python\framework\dtypes.py:517: FutureWarning: Passing (type, 1) or &#39;1type&#39; as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / &#39;(1,)type&#39;.
-  _np_quint8 = np.dtype([(&#34;quint8&#34;, np.uint8, 1)])
-C:\Users\Xiaowei\Anaconda3\envs\tfspark\lib\site-packages\tensorflow\python\framework\dtypes.py:518: FutureWarning: Passing (type, 1) or &#39;1type&#39; as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / &#39;(1,)type&#39;.
-  _np_qint16 = np.dtype([(&#34;qint16&#34;, np.int16, 1)])
-C:\Users\Xiaowei\Anaconda3\envs\tfspark\lib\site-packages\tensorflow\python\framework\dtypes.py:519: FutureWarning: Passing (type, 1) or &#39;1type&#39; as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / &#39;(1,)type&#39;.
-  _np_quint16 = np.dtype([(&#34;quint16&#34;, np.uint16, 1)])
-C:\Users\Xiaowei\Anaconda3\envs\tfspark\lib\site-packages\tensorflow\python\framework\dtypes.py:520: FutureWarning: Passing (type, 1) or &#39;1type&#39; as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / &#39;(1,)type&#39;.
-  _np_qint32 = np.dtype([(&#34;qint32&#34;, np.int32, 1)])
-C:\Users\Xiaowei\Anaconda3\envs\tfspark\lib\site-packages\tensorflow\python\framework\dtypes.py:525: FutureWarning: Passing (type, 1) or &#39;1type&#39; as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / &#39;(1,)type&#39;.
-  np_resource = np.dtype([(&#34;resource&#34;, np.ubyte, 1)])
-C:\Users\Xiaowei\Anaconda3\envs\tfspark\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:541: FutureWarning: Passing (type, 1) or &#39;1type&#39; as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / &#39;(1,)type&#39;.
-  _np_qint8 = np.dtype([(&#34;qint8&#34;, np.int8, 1)])
-C:\Users\Xiaowei\Anaconda3\envs\tfspark\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:542: FutureWarning: Passing (type, 1) or &#39;1type&#39; as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / &#39;(1,)type&#39;.
-  _np_quint8 = np.dtype([(&#34;quint8&#34;, np.uint8, 1)])
-C:\Users\Xiaowei\Anaconda3\envs\tfspark\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:543: FutureWarning: Passing (type, 1) or &#39;1type&#39; as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / &#39;(1,)type&#39;.
-  _np_qint16 = np.dtype([(&#34;qint16&#34;, np.int16, 1)])
-C:\Users\Xiaowei\Anaconda3\envs\tfspark\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:544: FutureWarning: Passing (type, 1) or &#39;1type&#39; as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / &#39;(1,)type&#39;.
-  _np_quint16 = np.dtype([(&#34;quint16&#34;, np.uint16, 1)])
-C:\Users\Xiaowei\Anaconda3\envs\tfspark\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:545: FutureWarning: Passing (type, 1) or &#39;1type&#39; as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / &#39;(1,)type&#39;.
-  _np_qint32 = np.dtype([(&#34;qint32&#34;, np.int32, 1)])
-C:\Users\Xiaowei\Anaconda3\envs\tfspark\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:550: FutureWarning: Passing (type, 1) or &#39;1type&#39; as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / &#39;(1,)type&#39;.
-  np_resource = np.dtype([(&#34;resource&#34;, np.ubyte, 1)])
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -13670,7 +13676,7 @@ C:\Users\Xiaowei\Anaconda3\envs\tfspark\lib\site-packages\tensorboard\compat\ten
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Seq2SeqModel</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
@@ -13700,7 +13706,7 @@ C:\Users\Xiaowei\Anaconda3\envs\tfspark\lib\site-packages\tensorboard\compat\ten
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">declare_placeholders</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -13728,7 +13734,7 @@ C:\Users\Xiaowei\Anaconda3\envs\tfspark\lib\site-packages\tensorboard\compat\ten
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Seq2SeqModel</span><span class="o">.</span><span class="n">__declare_placeholders</span> <span class="o">=</span> <span class="nb">classmethod</span><span class="p">(</span><span class="n">declare_placeholders</span><span class="p">)</span>
@@ -13753,7 +13759,7 @@ C:\Users\Xiaowei\Anaconda3\envs\tfspark\lib\site-packages\tensorboard\compat\ten
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">create_embeddings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">,</span> <span class="n">embeddings_size</span><span class="p">):</span>
@@ -13775,7 +13781,7 @@ C:\Users\Xiaowei\Anaconda3\envs\tfspark\lib\site-packages\tensorboard\compat\ten
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Seq2SeqModel</span><span class="o">.</span><span class="n">__create_embeddings</span> <span class="o">=</span> <span class="nb">classmethod</span><span class="p">(</span><span class="n">create_embeddings</span><span class="p">)</span>
@@ -13802,7 +13808,7 @@ C:\Users\Xiaowei\Anaconda3\envs\tfspark\lib\site-packages\tensorboard\compat\ten
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">build_encoder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">):</span>
@@ -13828,7 +13834,7 @@ C:\Users\Xiaowei\Anaconda3\envs\tfspark\lib\site-packages\tensorboard\compat\ten
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Seq2SeqModel</span><span class="o">.</span><span class="n">__build_encoder</span> <span class="o">=</span> <span class="nb">classmethod</span><span class="p">(</span><span class="n">build_encoder</span><span class="p">)</span>
@@ -13873,7 +13879,7 @@ C:\Users\Xiaowei\Anaconda3\envs\tfspark\lib\site-packages\tensorboard\compat\ten
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">build_decoder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">,</span> <span class="n">max_iter</span><span class="p">,</span> <span class="n">start_symbol_id</span><span class="p">,</span> <span class="n">end_symbol_id</span><span class="p">):</span>
@@ -13950,7 +13956,7 @@ C:\Users\Xiaowei\Anaconda3\envs\tfspark\lib\site-packages\tensorboard\compat\ten
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Seq2SeqModel</span><span class="o">.</span><span class="n">__build_decoder</span> <span class="o">=</span> <span class="nb">classmethod</span><span class="p">(</span><span class="n">build_decoder</span><span class="p">)</span>
@@ -13971,7 +13977,7 @@ C:\Users\Xiaowei\Anaconda3\envs\tfspark\lib\site-packages\tensorboard\compat\ten
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">compute_loss</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -13992,7 +13998,7 @@ C:\Users\Xiaowei\Anaconda3\envs\tfspark\lib\site-packages\tensorboard\compat\ten
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Seq2SeqModel</span><span class="o">.</span><span class="n">__compute_loss</span> <span class="o">=</span> <span class="nb">classmethod</span><span class="p">(</span><span class="n">compute_loss</span><span class="p">)</span>
@@ -14014,7 +14020,7 @@ We suggest that you use <a href="https://www.tensorflow.org/api_docs/python/tf/c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">perform_optimization</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -14035,7 +14041,7 @@ We suggest that you use <a href="https://www.tensorflow.org/api_docs/python/tf/c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Seq2SeqModel</span><span class="o">.</span><span class="n">__perform_optimization</span> <span class="o">=</span> <span class="nb">classmethod</span><span class="p">(</span><span class="n">perform_optimization</span><span class="p">)</span>
@@ -14057,7 +14063,7 @@ Now we will put them to the constructor of our Seq2SeqModel class to use it in t
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">init_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">,</span> <span class="n">embeddings_size</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">,</span> 
@@ -14084,7 +14090,7 @@ Now we will put them to the constructor of our Seq2SeqModel class to use it in t
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Seq2SeqModel</span><span class="o">.</span><span class="fm">__init__</span> <span class="o">=</span> <span class="nb">classmethod</span><span class="p">(</span><span class="n">init_model</span><span class="p">)</span>
@@ -14105,7 +14111,7 @@ Now we will put them to the constructor of our Seq2SeqModel class to use it in t
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">train_on_batch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">X_seq_len</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Y_seq_len</span><span class="p">,</span> <span class="n">learning_rate</span><span class="p">,</span> <span class="n">dropout_keep_probability</span><span class="p">):</span>
@@ -14131,7 +14137,7 @@ Now we will put them to the constructor of our Seq2SeqModel class to use it in t
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Seq2SeqModel</span><span class="o">.</span><span class="n">train_on_batch</span> <span class="o">=</span> <span class="nb">classmethod</span><span class="p">(</span><span class="n">train_on_batch</span><span class="p">)</span>
@@ -14152,7 +14158,7 @@ Now we will put them to the constructor of our Seq2SeqModel class to use it in t
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">predict_for_batch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">X_seq_len</span><span class="p">):</span>
@@ -14190,7 +14196,7 @@ Now we will put them to the constructor of our Seq2SeqModel class to use it in t
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Seq2SeqModel</span><span class="o">.</span><span class="n">predict_for_batch</span> <span class="o">=</span> <span class="nb">classmethod</span><span class="p">(</span><span class="n">predict_for_batch</span><span class="p">)</span>
@@ -14229,7 +14235,7 @@ Now we will put them to the constructor of our Seq2SeqModel class to use it in t
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tf</span><span class="o">.</span><span class="n">reset_default_graph</span><span class="p">()</span>
@@ -14276,10 +14282,10 @@ Now we will put them to the constructor of our Seq2SeqModel class to use it in t
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>WARNING:tensorflow:From &lt;ipython-input-22-314cb3255491&gt;:6: GRUCell.__init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+<pre>WARNING:tensorflow:From &lt;ipython-input-24-314cb3255491&gt;:6: GRUCell.__init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
 Instructions for updating:
 This class is equivalent as tf.keras.layers.GRUCell, and will be replaced by that in Tensorflow 2.0.
-WARNING:tensorflow:From &lt;ipython-input-22-314cb3255491&gt;:14: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+WARNING:tensorflow:From &lt;ipython-input-24-314cb3255491&gt;:14: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
 Instructions for updating:
 Please use `keras.layers.RNN(cell)`, which is equivalent to this API
 WARNING:tensorflow:From C:\Users\Xiaowei\Anaconda3\envs\tfspark\lib\site-packages\tensorflow\python\ops\init_ops.py:1251: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
@@ -14291,8 +14297,8 @@ Call initializer instance with the dtype argument instead of passing it to the c
 WARNING:tensorflow:From C:\Users\Xiaowei\Anaconda3\envs\tfspark\lib\site-packages\tensorflow\python\ops\rnn_cell_impl.py:574: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
 Instructions for updating:
 Call initializer instance with the dtype argument instead of passing it to the constructor
-WARNING:tensorflow:Entity &lt;bound method GRUCell.call of &lt;tensorflow.python.ops.rnn_cell_impl.GRUCell object at 0x000002CBC8C33BC8&gt;&gt; could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting &lt;bound method GRUCell.call of &lt;tensorflow.python.ops.rnn_cell_impl.GRUCell object at 0x000002CBC8C33BC8&gt;&gt;: AssertionError: Bad argument number for Name: 3, expecting 4
-WARNING: Entity &lt;bound method GRUCell.call of &lt;tensorflow.python.ops.rnn_cell_impl.GRUCell object at 0x000002CBC8C33BC8&gt;&gt; could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting &lt;bound method GRUCell.call of &lt;tensorflow.python.ops.rnn_cell_impl.GRUCell object at 0x000002CBC8C33BC8&gt;&gt;: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING:tensorflow:Entity &lt;bound method GRUCell.call of &lt;tensorflow.python.ops.rnn_cell_impl.GRUCell object at 0x000001F6A1986748&gt;&gt; could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting &lt;bound method GRUCell.call of &lt;tensorflow.python.ops.rnn_cell_impl.GRUCell object at 0x000001F6A1986748&gt;&gt;: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING: Entity &lt;bound method GRUCell.call of &lt;tensorflow.python.ops.rnn_cell_impl.GRUCell object at 0x000001F6A1986748&gt;&gt; could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting &lt;bound method GRUCell.call of &lt;tensorflow.python.ops.rnn_cell_impl.GRUCell object at 0x000001F6A1986748&gt;&gt;: AssertionError: Bad argument number for Name: 3, expecting 4
 WARNING:tensorflow:From C:\Users\Xiaowei\Anaconda3\envs\tfspark\lib\site-packages\tensorflow\python\ops\rnn.py:244: add_dispatch_support.&lt;locals&gt;.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Use tf.where in 2.0, which has the same broadcast rule as np.where
@@ -14304,14 +14310,14 @@ For more information, please see:
   * https://github.com/tensorflow/io (for I/O related ops)
 If you depend on functionality not listed there, please file an issue.
 
-WARNING:tensorflow:Entity &lt;bound method OutputProjectionWrapper.call of &lt;tensorflow.contrib.rnn.python.ops.core_rnn_cell.OutputProjectionWrapper object at 0x000002CBD1F3F308&gt;&gt; could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting &lt;bound method OutputProjectionWrapper.call of &lt;tensorflow.contrib.rnn.python.ops.core_rnn_cell.OutputProjectionWrapper object at 0x000002CBD1F3F308&gt;&gt;: AssertionError: Bad argument number for Name: 3, expecting 4
-WARNING: Entity &lt;bound method OutputProjectionWrapper.call of &lt;tensorflow.contrib.rnn.python.ops.core_rnn_cell.OutputProjectionWrapper object at 0x000002CBD1F3F308&gt;&gt; could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting &lt;bound method OutputProjectionWrapper.call of &lt;tensorflow.contrib.rnn.python.ops.core_rnn_cell.OutputProjectionWrapper object at 0x000002CBD1F3F308&gt;&gt;: AssertionError: Bad argument number for Name: 3, expecting 4
-WARNING:tensorflow:Entity &lt;bound method GRUCell.call of &lt;tensorflow.python.ops.rnn_cell_impl.GRUCell object at 0x000002CBD332C488&gt;&gt; could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting &lt;bound method GRUCell.call of &lt;tensorflow.python.ops.rnn_cell_impl.GRUCell object at 0x000002CBD332C488&gt;&gt;: AssertionError: Bad argument number for Name: 3, expecting 4
-WARNING: Entity &lt;bound method GRUCell.call of &lt;tensorflow.python.ops.rnn_cell_impl.GRUCell object at 0x000002CBD332C488&gt;&gt; could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting &lt;bound method GRUCell.call of &lt;tensorflow.python.ops.rnn_cell_impl.GRUCell object at 0x000002CBD332C488&gt;&gt;: AssertionError: Bad argument number for Name: 3, expecting 4
-WARNING:tensorflow:Entity &lt;bound method OutputProjectionWrapper.call of &lt;tensorflow.contrib.rnn.python.ops.core_rnn_cell.OutputProjectionWrapper object at 0x000002CBD3650908&gt;&gt; could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting &lt;bound method OutputProjectionWrapper.call of &lt;tensorflow.contrib.rnn.python.ops.core_rnn_cell.OutputProjectionWrapper object at 0x000002CBD3650908&gt;&gt;: AssertionError: Bad argument number for Name: 3, expecting 4
-WARNING: Entity &lt;bound method OutputProjectionWrapper.call of &lt;tensorflow.contrib.rnn.python.ops.core_rnn_cell.OutputProjectionWrapper object at 0x000002CBD3650908&gt;&gt; could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting &lt;bound method OutputProjectionWrapper.call of &lt;tensorflow.contrib.rnn.python.ops.core_rnn_cell.OutputProjectionWrapper object at 0x000002CBD3650908&gt;&gt;: AssertionError: Bad argument number for Name: 3, expecting 4
-WARNING:tensorflow:Entity &lt;bound method GRUCell.call of &lt;tensorflow.python.ops.rnn_cell_impl.GRUCell object at 0x000002CBD332C208&gt;&gt; could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting &lt;bound method GRUCell.call of &lt;tensorflow.python.ops.rnn_cell_impl.GRUCell object at 0x000002CBD332C208&gt;&gt;: AssertionError: Bad argument number for Name: 3, expecting 4
-WARNING: Entity &lt;bound method GRUCell.call of &lt;tensorflow.python.ops.rnn_cell_impl.GRUCell object at 0x000002CBD332C208&gt;&gt; could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting &lt;bound method GRUCell.call of &lt;tensorflow.python.ops.rnn_cell_impl.GRUCell object at 0x000002CBD332C208&gt;&gt;: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING:tensorflow:Entity &lt;bound method OutputProjectionWrapper.call of &lt;tensorflow.contrib.rnn.python.ops.core_rnn_cell.OutputProjectionWrapper object at 0x000001F6A3E2FDC8&gt;&gt; could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting &lt;bound method OutputProjectionWrapper.call of &lt;tensorflow.contrib.rnn.python.ops.core_rnn_cell.OutputProjectionWrapper object at 0x000001F6A3E2FDC8&gt;&gt;: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING: Entity &lt;bound method OutputProjectionWrapper.call of &lt;tensorflow.contrib.rnn.python.ops.core_rnn_cell.OutputProjectionWrapper object at 0x000001F6A3E2FDC8&gt;&gt; could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting &lt;bound method OutputProjectionWrapper.call of &lt;tensorflow.contrib.rnn.python.ops.core_rnn_cell.OutputProjectionWrapper object at 0x000001F6A3E2FDC8&gt;&gt;: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING:tensorflow:Entity &lt;bound method GRUCell.call of &lt;tensorflow.python.ops.rnn_cell_impl.GRUCell object at 0x000001F6A3DBE808&gt;&gt; could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting &lt;bound method GRUCell.call of &lt;tensorflow.python.ops.rnn_cell_impl.GRUCell object at 0x000001F6A3DBE808&gt;&gt;: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING: Entity &lt;bound method GRUCell.call of &lt;tensorflow.python.ops.rnn_cell_impl.GRUCell object at 0x000001F6A3DBE808&gt;&gt; could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting &lt;bound method GRUCell.call of &lt;tensorflow.python.ops.rnn_cell_impl.GRUCell object at 0x000001F6A3DBE808&gt;&gt;: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING:tensorflow:Entity &lt;bound method OutputProjectionWrapper.call of &lt;tensorflow.contrib.rnn.python.ops.core_rnn_cell.OutputProjectionWrapper object at 0x000001F6A3F9F188&gt;&gt; could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting &lt;bound method OutputProjectionWrapper.call of &lt;tensorflow.contrib.rnn.python.ops.core_rnn_cell.OutputProjectionWrapper object at 0x000001F6A3F9F188&gt;&gt;: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING: Entity &lt;bound method OutputProjectionWrapper.call of &lt;tensorflow.contrib.rnn.python.ops.core_rnn_cell.OutputProjectionWrapper object at 0x000001F6A3F9F188&gt;&gt; could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting &lt;bound method OutputProjectionWrapper.call of &lt;tensorflow.contrib.rnn.python.ops.core_rnn_cell.OutputProjectionWrapper object at 0x000001F6A3F9F188&gt;&gt;: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING:tensorflow:Entity &lt;bound method GRUCell.call of &lt;tensorflow.python.ops.rnn_cell_impl.GRUCell object at 0x000001F6A34D9CC8&gt;&gt; could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting &lt;bound method GRUCell.call of &lt;tensorflow.python.ops.rnn_cell_impl.GRUCell object at 0x000001F6A34D9CC8&gt;&gt;: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING: Entity &lt;bound method GRUCell.call of &lt;tensorflow.python.ops.rnn_cell_impl.GRUCell object at 0x000001F6A34D9CC8&gt;&gt; could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting &lt;bound method GRUCell.call of &lt;tensorflow.python.ops.rnn_cell_impl.GRUCell object at 0x000001F6A34D9CC8&gt;&gt;: AssertionError: Bad argument number for Name: 3, expecting 4
 </pre>
 </div>
 </div>
@@ -14330,7 +14336,7 @@ WARNING: Entity &lt;bound method GRUCell.call of &lt;tensorflow.python.ops.rnn_c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
@@ -14433,188 +14439,188 @@ WARNING: Entity &lt;bound method GRUCell.call of &lt;tensorflow.python.ops.rnn_c
 <pre>Start training... 
 
 Train: epoch 1
-Epoch: [1/10], step: [1/625], loss: 2.686857
-Epoch: [1/10], step: [201/625], loss: 1.800383
-Epoch: [1/10], step: [401/625], loss: 1.703775
-Epoch: [1/10], step: [601/625], loss: 1.660449
-Test: epoch 1 loss: 1.5826331
-X: 8228-6736$
-Y: 1492$#
-O: 187$##
+Epoch: [1/10], step: [1/625], loss: 2.710865
+Epoch: [1/10], step: [201/625], loss: 1.815758
+Epoch: [1/10], step: [401/625], loss: 1.746631
+Epoch: [1/10], step: [601/625], loss: 1.619111
+Test: epoch 1 loss: 1.5540242
+X: 3709+6639$
+Y: 10348$
+O: 10045$
 
-X: 2160-955$#
-Y: 1205$#
-O: -1070$
+X: 4273-2130$
+Y: 2143$#
+O: 199$##
 
-X: 9817-4010$
-Y: 5807$#
-O: 3633$#
+X: 1744-7181$
+Y: -5437$
+O: -5722$
 
 Train: epoch 2
-Epoch: [2/10], step: [1/625], loss: 1.645708
-Epoch: [2/10], step: [201/625], loss: 1.551543
-Epoch: [2/10], step: [401/625], loss: 1.526725
-Epoch: [2/10], step: [601/625], loss: 1.491453
-Test: epoch 2 loss: 1.4257107
-X: 6792+8940$
-Y: 15732$
-O: 15922$
+Epoch: [2/10], step: [1/625], loss: 1.638060
+Epoch: [2/10], step: [201/625], loss: 1.601655
+Epoch: [2/10], step: [401/625], loss: 1.464514
+Epoch: [2/10], step: [601/625], loss: 1.434389
+Test: epoch 2 loss: 1.4030632
+X: 7389-2084$
+Y: 5305$#
+O: 5399$#
 
-X: 5115+2352$
-Y: 7467$#
-O: 7277$#
+X: 8771-9176$
+Y: -405$#
+O: -100$#
 
-X: 1079+4850$
-Y: 5929$#
-O: 6222$#
+X: 1657+1410$
+Y: 3067$#
+O: 3999$#
 
 Train: epoch 3
-Epoch: [3/10], step: [1/625], loss: 1.443389
-Epoch: [3/10], step: [201/625], loss: 1.455066
-Epoch: [3/10], step: [401/625], loss: 1.488242
-Epoch: [3/10], step: [601/625], loss: 1.355038
-Test: epoch 3 loss: 1.3278608
-X: 5277-4190$
-Y: 1087$#
-O: 1075$#
+Epoch: [3/10], step: [1/625], loss: 1.470803
+Epoch: [3/10], step: [201/625], loss: 1.469481
+Epoch: [3/10], step: [401/625], loss: 1.469299
+Epoch: [3/10], step: [601/625], loss: 1.386456
+Test: epoch 3 loss: 1.3521445
+X: 3323+2972$
+Y: 6295$#
+O: 6882$#
 
-X: 3957+2838$
-Y: 6795$#
-O: 6999$#
+X: 3560-430$#
+Y: 3130$#
+O: 3883$#
 
-X: 8792-418$#
-Y: 8374$#
-O: 8375$#
+X: 478-88$###
+Y: 390$##
+O: 333$##
 
 Train: epoch 4
-Epoch: [4/10], step: [1/625], loss: 1.370641
-Epoch: [4/10], step: [201/625], loss: 1.411556
-Epoch: [4/10], step: [401/625], loss: 1.407876
-Epoch: [4/10], step: [601/625], loss: 1.306173
-Test: epoch 4 loss: 1.2830412
-X: 1126+9229$
-Y: 10355$
-O: 10888$
+Epoch: [4/10], step: [1/625], loss: 1.382184
+Epoch: [4/10], step: [201/625], loss: 1.392265
+Epoch: [4/10], step: [401/625], loss: 1.335881
+Epoch: [4/10], step: [601/625], loss: 1.344808
+Test: epoch 4 loss: 1.3102701
+X: 7648+3008$
+Y: 10656$
+O: 10677$
 
-X: 7708-6124$
-Y: 1584$#
-O: 1580$#
+X: 451+1928$#
+Y: 2379$#
+O: 2666$#
 
-X: 2812-8961$
-Y: -6149$
-O: -6488$
+X: 6010-3590$
+Y: 2420$#
+O: 2664$#
 
 Train: epoch 5
-Epoch: [5/10], step: [1/625], loss: 1.383637
-Epoch: [5/10], step: [201/625], loss: 1.313827
-Epoch: [5/10], step: [401/625], loss: 1.331539
-Epoch: [5/10], step: [601/625], loss: 1.295825
-Test: epoch 5 loss: 1.255051
-X: 1562+9097$
-Y: 10659$
-O: 11012$
+Epoch: [5/10], step: [1/625], loss: 1.341801
+Epoch: [5/10], step: [201/625], loss: 1.340180
+Epoch: [5/10], step: [401/625], loss: 1.306067
+Epoch: [5/10], step: [601/625], loss: 1.312754
+Test: epoch 5 loss: 1.2876402
+X: 2874-5182$
+Y: -2308$
+O: -1741$
 
-X: 8016+1200$
-Y: 9216$#
-O: 9222$#
+X: 9573-8035$
+Y: 1538$#
+O: 1744$#
 
-X: 3408-7287$
-Y: -3879$
-O: -3722$
+X: 3927-4919$
+Y: -992$#
+O: -1012$
 
 Train: epoch 6
-Epoch: [6/10], step: [1/625], loss: 1.277767
-Epoch: [6/10], step: [201/625], loss: 1.295056
-Epoch: [6/10], step: [401/625], loss: 1.268398
-Epoch: [6/10], step: [601/625], loss: 1.247459
-Test: epoch 6 loss: 1.2293072
-X: 3898+6474$
-Y: 10372$
-O: 10308$
+Epoch: [6/10], step: [1/625], loss: 1.307083
+Epoch: [6/10], step: [201/625], loss: 1.319121
+Epoch: [6/10], step: [401/625], loss: 1.305488
+Epoch: [6/10], step: [601/625], loss: 1.271333
+Test: epoch 6 loss: 1.2309101
+X: 9721+4424$
+Y: 14145$
+O: 14000$
 
-X: 4891+4527$
-Y: 9418$#
-O: 9360$#
+X: 5713+2664$
+Y: 8377$#
+O: 8505$#
 
-X: 6338-2970$
-Y: 3368$#
-O: 3638$#
+X: 5351+4633$
+Y: 9984$#
+O: 9755$#
 
 Train: epoch 7
-Epoch: [7/10], step: [1/625], loss: 1.230173
-Epoch: [7/10], step: [201/625], loss: 1.256874
-Epoch: [7/10], step: [401/625], loss: 1.185070
-Epoch: [7/10], step: [601/625], loss: 1.154047
-Test: epoch 7 loss: 1.0934924
-X: 5160+4531$
-Y: 9691$#
-O: 9716$#
+Epoch: [7/10], step: [1/625], loss: 1.252283
+Epoch: [7/10], step: [201/625], loss: 1.223165
+Epoch: [7/10], step: [401/625], loss: 1.254130
+Epoch: [7/10], step: [601/625], loss: 1.190828
+Test: epoch 7 loss: 1.1391248
+X: 232+946$##
+Y: 1178$#
+O: 1255$#
 
-X: 3809+484$#
-Y: 4293$#
-O: 4866$#
+X: 1453-6528$
+Y: -5075$
+O: -4988$
 
-X: 1098-312$#
-Y: 786$##
-O: 800$##
+X: 4617-777$#
+Y: 3840$#
+O: 3842$#
 
 Train: epoch 8
-Epoch: [8/10], step: [1/625], loss: 1.169174
-Epoch: [8/10], step: [201/625], loss: 1.101459
-Epoch: [8/10], step: [401/625], loss: 1.092906
-Epoch: [8/10], step: [601/625], loss: 1.049431
-Test: epoch 8 loss: 1.0291412
-X: 9542-6246$
-Y: 3296$#
-O: 3355$#
+Epoch: [8/10], step: [1/625], loss: 1.153738
+Epoch: [8/10], step: [201/625], loss: 1.169950
+Epoch: [8/10], step: [401/625], loss: 1.097281
+Epoch: [8/10], step: [601/625], loss: 1.025529
+Test: epoch 8 loss: 1.0085304
+X: 2053-2386$
+Y: -333$#
+O: -277$#
 
-X: 2816-9276$
-Y: -6460$
-O: -6505$
+X: 4253-3856$
+Y: 397$##
+O: 388$##
 
-X: 8166+7601$
-Y: 15767$
-O: 15714$
+X: 7085-8346$
+Y: -1261$
+O: -1330$
 
 Train: epoch 9
-Epoch: [9/10], step: [1/625], loss: 1.068143
-Epoch: [9/10], step: [201/625], loss: 1.046260
-Epoch: [9/10], step: [401/625], loss: 1.030326
-Epoch: [9/10], step: [601/625], loss: 0.960655
-Test: epoch 9 loss: 0.9703977
-X: 5778+1889$
-Y: 7667$#
-O: 7682$#
+Epoch: [9/10], step: [1/625], loss: 1.047751
+Epoch: [9/10], step: [201/625], loss: 1.046207
+Epoch: [9/10], step: [401/625], loss: 1.021450
+Epoch: [9/10], step: [601/625], loss: 1.016213
+Test: epoch 9 loss: 0.94405097
+X: 1018-2251$
+Y: -1233$
+O: -1215$
 
-X: 1340+6460$
-Y: 7800$#
-O: 7839$#
+X: 5529-2286$
+Y: 3243$#
+O: 3211$#
 
-X: 2742+9015$
-Y: 11757$
-O: 11782$
+X: 9254-6428$
+Y: 2826$#
+O: 2850$#
 
 Train: epoch 10
-Epoch: [10/10], step: [1/625], loss: 0.998668
-Epoch: [10/10], step: [201/625], loss: 0.990786
-Epoch: [10/10], step: [401/625], loss: 1.015094
-Epoch: [10/10], step: [601/625], loss: 0.951173
-Test: epoch 10 loss: 0.91467565
-X: 8641+1513$
-Y: 10154$
-O: 10189$
+Epoch: [10/10], step: [1/625], loss: 1.022296
+Epoch: [10/10], step: [201/625], loss: 0.982518
+Epoch: [10/10], step: [401/625], loss: 0.937399
+Epoch: [10/10], step: [601/625], loss: 0.974862
+Test: epoch 10 loss: 0.92844474
+X: 6179+8561$
+Y: 14740$
+O: 14718$
 
-X: 8379-6806$
-Y: 1573$#
-O: 1511$#
+X: 499-2644$#
+Y: -2145$
+O: -2223$
 
-X: 3689+4826$
-Y: 8515$#
-O: 8539$#
+X: 6005-2989$
+Y: 3016$#
+O: 3066$#
 
 
 ...training finished.
-Wall time: 3min 27s
+Wall time: 3min 5s
 </pre>
 </div>
 </div>
@@ -14633,7 +14639,7 @@ Wall time: 3min 27s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_absolute_error</span>
@@ -14646,7 +14652,7 @@ Wall time: 3min 27s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">gts</span><span class="p">,</span> <span class="n">predictions</span><span class="p">,</span> <span class="n">invalid_number_prediction_count</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">all_ground_truth</span><span class="p">,</span>
@@ -14671,16 +14677,16 @@ Wall time: 3min 27s
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch: 1, MAE: 910.154300, Invalid numbers: 19994
-Epoch: 2, MAE: 333.400300, Invalid numbers: 19984
-Epoch: 3, MAE: 240.449350, Invalid numbers: 19973
-Epoch: 4, MAE: 191.622000, Invalid numbers: 19959
-Epoch: 5, MAE: 167.036800, Invalid numbers: 19969
-Epoch: 6, MAE: 132.873450, Invalid numbers: 19952
-Epoch: 7, MAE: 72.704900, Invalid numbers: 19884
-Epoch: 8, MAE: 55.413150, Invalid numbers: 19840
-Epoch: 9, MAE: 40.015250, Invalid numbers: 19779
-Epoch: 10, MAE: 37.736000, Invalid numbers: 19728
+<pre>Epoch: 1, MAE: 864.862900, Invalid numbers: 19993
+Epoch: 2, MAE: 420.314300, Invalid numbers: 19988
+Epoch: 3, MAE: 256.350500, Invalid numbers: 19977
+Epoch: 4, MAE: 202.377850, Invalid numbers: 19968
+Epoch: 5, MAE: 191.275400, Invalid numbers: 19964
+Epoch: 6, MAE: 130.557850, Invalid numbers: 19948
+Epoch: 7, MAE: 94.382900, Invalid numbers: 19931
+Epoch: 8, MAE: 62.053550, Invalid numbers: 19850
+Epoch: 9, MAE: 40.844300, Invalid numbers: 19781
+Epoch: 10, MAE: 31.495750, Invalid numbers: 19707
 </pre>
 </div>
 </div>
